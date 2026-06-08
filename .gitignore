@@ -21,3 +21,7 @@ model_weights/
 *.pth
 *.log
 .ipynb_checkpoints/
+
+# Virtual environments (any name)
+.venv*/
+*venv/

@@ -31,7 +31,7 @@ class KeyframeGenerator:
 
     def __init__(
         self,
-        model_name: str = "wan-1.3b",
+        model_name: str = "Wan-AI/Wan2.1-T2V-1.3B-Diffusers",
         model_path: Optional[str] = None,
         dtype: str = "float16",
         low_memory: bool = True,
@@ -63,13 +63,14 @@ class KeyframeGenerator:
         torch_dtype = dtype_map.get(self._dtype, torch.float16)
 
         try:
-            from transformers import AutoModel
+            from diffusers import WanTransformer3DModel
 
+            # Wan is a diffusers model; load the diffusion transformer (DiT).
             path = self._model_path or self._model_name
-            model = AutoModel.from_pretrained(
+            model = WanTransformer3DModel.from_pretrained(
                 path,
+                subfolder="transformer",
                 torch_dtype=torch_dtype,
-                trust_remote_code=True,
                 low_cpu_mem_usage=self._low_memory,
             )
             model.eval()
