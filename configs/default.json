@@ -1,0 +1,19 @@
+{
+  "model_name": "wan-1.3b",
+  "keyframe_interval": 8,
+  "num_frames": 16,
+  "delta_model_scale": 0.1,
+  "error_correction": true,
+  "max_delta_norm": 10.0,
+  "dtype": "float16",
+  "low_memory": true,
+  "latent_shape": [4, 32, 32],
+  "delta_config": {
+    "channels": 4,
+    "hidden_channels": 128,
+    "num_res_blocks": 4,
+    "time_embed_dim": 128,
+    "use_attention": false,
+    "dropout": 0.0
+  }
+}

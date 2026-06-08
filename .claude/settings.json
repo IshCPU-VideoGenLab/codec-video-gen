@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": ["Read", "Edit", "Create", "Bash(python *)", "Bash(pytest *)", "Bash(pip *)", "Bash(git add *)", "Bash(git commit *)", "Bash(git status)", "Bash(git diff *)", "Bash(git log *)", "Bash(ls *)", "Bash(cat *)", "Bash(find *)"],
+    "deny": ["Bash(git push *)", "Bash(git checkout main)", "Bash(rm -rf *)", "Bash(sudo *)"]
+  },
+  "project": {
+    "name": "codec-video-gen",
+    "org": "IshCPU-VideoGenLab",
+    "phase": 3,
+    "context_file": "CLAUDE.md",
+    "tasks_file": "tasks/todo.md",
+    "lessons_file": "lessons.md"
+  }
+}
