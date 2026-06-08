@@ -33,7 +33,7 @@ This is **Phase 3** of a 7-phase research project:
 | 2 | [mamba-video](https://github.com/IshCPU-VideoGenLab/mamba-video) | Replace attention with Mamba/SSM |
 | **3** | **codec-video-gen** (this repo) | **Codec-inspired temporal design** |
 | 4 | bitnet-video | 1-bit quantization (BitNet) |
-| 5 | avx2-kernels | AVX2 CPU execution engine |
+| 5 | simd-kernels | Portable SIMD execution engine (AVX2 + NEON) |
 | 6 | (distributed) | Distributed CPU training |
 | 7 | cpu-video-gen | Flagship paper repo |
 
