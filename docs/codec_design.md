@@ -172,7 +172,7 @@ Based on the nature of video:
   Mamba-modified version, stacking speedups multiplicatively.
 - **Phase 4** (BitNet): Both the full model AND the delta predictor
   can be quantized to 1-bit, further reducing compute.
-- **Phase 5** (AVX2): The delta predictor's Conv2D operations are
-  straightforward to implement in AVX2 kernels.
+- **Phase 5** (SIMD): The delta predictor's Conv2D operations are
+  straightforward to implement in portable SIMD kernels (AVX2 on x86, NEON on ARM).
 
 Combined effect: each optimization multiplies with the others.
