@@ -31,7 +31,7 @@ class CodecConfig:
     """Configuration for codec-style video generation.
 
     Args:
-        model_name: Base model name (e.g., "wan-1.3b").
+        model_name: Base model name (e.g., "Wan-AI/Wan2.1-T2V-1.3B-Diffusers").
         model_path: Local path to model weights.
         keyframe_interval: Number of frames between I-frames (GOP size).
         num_frames: Total number of frames to generate.
@@ -46,7 +46,7 @@ class CodecConfig:
         verbose: Print progress.
     """
 
-    model_name: str = "wan-1.3b"
+    model_name: str = "Wan-AI/Wan2.1-T2V-1.3B-Diffusers"
     model_path: Optional[str] = None
     keyframe_interval: int = 8
     num_frames: int = 16
@@ -85,7 +85,7 @@ class RedundancyConfig:
         dtype: Data type.
     """
 
-    model_name: str = "wan-1.3b"
+    model_name: str = "Wan-AI/Wan2.1-T2V-1.3B-Diffusers"
     model_path: Optional[str] = None
     num_frames: int = 16
     num_samples: int = 5

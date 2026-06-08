@@ -16,7 +16,7 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
 
     # --- generate ---
     gen = sub.add_parser("generate", help="Generate video with codec pipeline")
-    gen.add_argument("--model", type=str, default="wan-1.3b")
+    gen.add_argument("--model", type=str, default="Wan-AI/Wan2.1-T2V-1.3B-Diffusers")
     gen.add_argument("--num-frames", type=int, default=16)
     gen.add_argument("--keyframe-interval", type=int, default=8)
     gen.add_argument("--output", type=str, default="results")
