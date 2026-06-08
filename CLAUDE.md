@@ -101,23 +101,16 @@ expensive forward passes needed.
 
 ---
 
-## Hardware Constraints
+## Hardware
 
-Benchmark target — the canonical thesis machine. *If it runs on a Pentium Gold, it runs anywhere.*
+- **Primary (development + benchmarking):** MacBook Air M4 — ARM64 / NEON, no GPU.
+- **Supported, CI-verified:** commodity x86 with AVX2 (any modern Intel/AMD CPU).
+- **Origin, proof-of-concept (retired):** Intel Pentium Gold 7505 — x86-64 / AVX2, 2C/4T, 16 GB.
 
-| Spec       | Value                              |
-|------------|-------------------------------------|
-| CPU        | Intel Pentium Gold 7505 (x86-64, AVX2) |
-| Cores      | 2 cores / 4 threads                 |
-| RAM        | 16 GB DDR4 3200 MHz (single channel)|
-| GPU        | Intel UHD Graphics (integrated)     |
-| Storage    | ~100 GB available                   |
-| Python     | 3.9                                 |
-| Env        | venv (no conda)                     |
-
-**Development machine:** development now happens on a **MacBook Air M4 (ARM64)** (the Pentium laptop
-was retired). Keep code architecture-portable — Phase 5's portable SIMD library (AVX2 + NEON +
-scalar) gives CPU-native execution on both x86 and ARM.
+CPU-native, no GPU, across **both** architectures. We develop on the M4, but **all code must stay
+within the commodity-hardware design budget** — assume **2–4 cores, 16 GB RAM (~12 GB usable),
+no GPU**, and it must run on x86 (AVX2) **and** ARM (NEON). The Pentium Gold proved the
+weakest-hardware case. Python 3.9, venv (no conda).
 
 ### What This Means For Code:
 
